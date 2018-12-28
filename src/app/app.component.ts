@@ -11,7 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 @Component({
   templateUrl: 'app.html'
 })
-export class BerimMasjedApp {
+export class KolbehKeramatApp {
   rootPage:any = LoginPage;
   textDir: string = "rtl";
 

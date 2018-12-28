@@ -16,7 +16,7 @@ import { ENV } from '../../env';
 
 export class ContactPage {
 
-  public people = new Array();
+  public sessions = new Array();
   public serverWebApp;
 
   private detailPage;
@@ -40,23 +40,23 @@ export class ContactPage {
     let loader = loadingCtrl.create({ content: "..." });
     loader.present();
 
-    restProvider.getUsers(0).subscribe(people => {
-      console.log('people : ', people);
-      for (let i = 0; i < people.length; i++) {
-        if (people[i].personalPic)
-          people[i].img = ENV.webapp.baseUrl + ENV.webapp.avatarFolder + "/" + people[i].personalPic;
+    restProvider.getUsers(0).subscribe(sessions => {
+      console.log('sessions : ', sessions);
+      for (let i = 0; i < sessions.length; i++) {
+        if (sessions[i].personalPic)
+          sessions[i].img = ENV.webapp.baseUrl + ENV.webapp.avatarFolder + "/" + sessions[i].personalPic;
         else
-          people[i].img = ENV.webapp.baseUrl + "/img/default/defaultAvatar.png";
+          sessions[i].img = ENV.webapp.baseUrl + "/img/default/defaultAvatar.png";
       }
       loader.dismiss();
 
-      this.data = people;
-      this.people = this.data.data;
+      this.data = sessions;
+      this.sessions = this.data.data;
       this.perPage = this.data.per_page;
       this.totalData = this.data.total;
       this.totalPage += 1;//this.data.total_pages;
 
-      this.people = people;
+      this.sessions = sessions;
     });
   }
 
@@ -70,19 +70,19 @@ export class ContactPage {
     setTimeout(() => {
       this.restProvider.getUsers(this.page)
         .subscribe(
-          people => {
-            for (let i = 0; i < people.length; i++) {
-              if (people[i].personalPic)
-                people[i].img = ENV.webapp.baseUrl + ENV.webapp.avatarFolder + "/" + people[i].personalPic;
+          sessions => {
+            for (let i = 0; i < sessions.length; i++) {
+              if (sessions[i].personalPic)
+                sessions[i].img = ENV.webapp.baseUrl + ENV.webapp.avatarFolder + "/" + sessions[i].personalPic;
               else
-                people[i].img = ENV.webapp.baseUrl + "/img/default/defaultAvatar.png";
+                sessions[i].img = ENV.webapp.baseUrl + "/img/default/defaultAvatar.png";
             }
-            this.data = people;
+            this.data = sessions;
             this.perPage = this.data.per_page;
             this.totalData = this.data.total;
             this.totalPage += 1;// this.data.total_pages;
             for (let i = 0; i < this.data.length; i++) {
-              this.people.push(this.data[i]);
+              this.sessions.push(this.data[i]);
             }
           },
           error => this.errorMessage = <any>error);

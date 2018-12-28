@@ -1,4 +1,4 @@
-export interface MasjediModel {
+export interface AppModel {
     id:          string;
     name:        string;
     personalPic: string;

@@ -16,7 +16,7 @@ export class RestProvider {
   }
 
   apiUrl = ENV.api.baseUrl;
-  apiFolder = 'api';
+  apiFolder = '';
 
   getStories(page): Observable<any[]> {
     let URL1 = this.apiUrl + this.apiFolder + '/getUsersStory.php?token=asdfadsfklajdhi849hjbsvdsv&page=' + page;
@@ -38,20 +38,20 @@ export class RestProvider {
       //.catch(this.handleError);
       .catch((err) => {
                 
-        // Do messaging and error handling here
+        // Do messaging and error handling here //TODO: add service to send message for pages
        
         return Observable.throw(err)
     })
   }
 
   getPosts(page): Observable<any[]> {
-    let URL2 = this.apiUrl + this.apiFolder + '/getUsersPosts.php?token=asdfadsfklajdhi849hjbsvdsv&page=' + page;
+    let URL2 = this.apiUrl + this.apiFolder + '/Sessions/?token=asdfadsfklajdhi849hjbsvdsv&page=' + page;
 
     return this.http.get(URL2)
       //.catch(this.handleError);
       .catch((err) => {
                 
-        // Do messaging and error handling here
+        // Do messaging and error handling here //TODO: add service to send message for pages
        
         return Observable.throw(err)
     })
@@ -64,7 +64,7 @@ export class RestProvider {
       //.catch(this.handleError);
       .catch((err) => {
                 
-        // Do messaging and error handling here
+        // Do messaging and error handling here //TODO: add service to send message for pages
        
         return Observable.throw(err)
     })
@@ -85,7 +85,7 @@ export class RestProvider {
       //.catch(this.handleError);
       .catch((err) => {
                 
-        // Do messaging and error handling here
+        // Do messaging and error handling here //TODO: add service to send message for pages
        
         return Observable.throw(err)
     })

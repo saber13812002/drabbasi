@@ -1,48 +1,48 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      مسجدی
+      کلبه کرامت
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>مسجدی ها</ion-list-header>
-    <ion-item *ngFor="let p of people">
+    <ion-list-header>جلسات</ion-list-header>
+    <ion-item *ngFor="let ss of sessions">
       <!--      <ion-icon name="ionic" item-start></ion-icon>-->
       <div class="bg-image">
         <hr>
         <ion-thumbnail>
-          <img (click)="loadPlayerDetail(p)" src="{{p.img}}" class="round-image" style="height: 150px !important;  width: 150px !important;              background: none !important;     background-color :none !important; display: inline !important;" />
+          <img (click)="loadPlayerDetail(ss)" src="{{ss.img}}" class="round-image" style="height: 150px !important;  width: 150px !important;              background: none !important;     background-color :none !important; display: inline !important;" />
         </ion-thumbnail>
 
         <!--            </ion-img> -->
 
         <hr>
-        {{p.name}}
+        {{ss.name}}
         <hr>
 
-        <a href="https://t.me/{{p.uInstagramId}}"><img class="sociallogo" src="{{serverWebApp}}/assets/imgs/telegram.png" /></a>
-        <a href="https://instagram.com/{{p.uTelegramlId}}"><img class="sociallogo" src="../../assets/imgs/instagram.png" /></a>
-        <a href="{{p.apiUrl}}/www/player.php?id={{p.id}}"><img class="sociallogo" src="../../assets/imgs/website.png" /></a>
+        <a href="https://t.me/{{ss.uInstagramId}}"><img class="sociallogo" src="{{serverWebApp}}/assets/imgs/telegram.png" /></a>
+        <a href="https://instagram.com/{{ss.uTelegramlId}}"><img class="sociallogo" src="../../assets/imgs/instagram.png" /></a>
+        <a href="{{ss.apiUrl}}/www/player.php?id={{ss.id}}"><img class="sociallogo" src="../../assets/imgs/website.png" /></a>
 
         <ion-list (click)="loadPlayerDetail(p)">
           <ion-item class="item2col">
             <ion-row>
               <ion-col width-50>
-                جنسیت : {{ p.jens=="1" ? "آقا" : "خانم" }}
+                جنسیت : {{ ss.jens=="1" ? "آقا" : "خانم" }}
               </ion-col>
               <ion-col width-50>
-                استان : {{p.province}}
+                استان : {{ss.province}}
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col width-50>
-                رشته : {{p.field}}
+                رشته : {{ss.field}}
               </ion-col>
               <ion-col width-50>
-                محل تولد : {{p.birthPlace}}
+                محل تولد : {{ss.birthPlace}}
               </ion-col>
             </ion-row>
           </ion-item>

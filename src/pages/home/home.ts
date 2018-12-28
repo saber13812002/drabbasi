@@ -45,17 +45,11 @@ export class HomePage {
 
     this.detailPage = PlaygroundDetailPage;
 
-    let loader = loadingCtrl.create({ content: "در حال بارگذاری ..." });
+    let loader = loadingCtrl.create({ content: "..." });
     loader.present();
 
     restProvider.getStories(0).subscribe(stories => {
       console.log('stories : ', stories);
-      for (let i = 0; i < stories.length; i++) {
-        if (stories[i].personalPic)
-          stories[i].img = ENV.webapp.baseUrl + ENV.webapp.avatarFolder + "/" + stories[i].personalPic;
-        else
-          stories[i].img = "http://masjedcloob.ir/img/default/defaultAvatar.png";
-      }
       this.data = stories;
       this.stories = this.data.data;
       this.perPage = this.data.per_page;
@@ -66,8 +60,6 @@ export class HomePage {
     restProvider.getPosts(0).subscribe(posts => {
 
       posts.forEach(element => {
-        element.text = element.text.replace(/<\/?[^>]+(>|$)/g, "");
-        element.file = element.file.replace("upload/", "mobile/");
         element.file = element.file + ".jpg";
         return element
       });
@@ -95,21 +87,13 @@ export class HomePage {
       this.restProvider.getPosts(((this.page)))
         .subscribe(
           posts => {
-            for (let i = 0; i < posts.length; i++) {
-              posts[i].text = posts[i].text.replace(/<\/?[^>]+(>|$)/g, "");
-              posts[i].file = posts[i].file.replace("upload/", "mobile/");
-              posts[i].file = posts[i].file + ".jpg";
-            };
-
             this.data = posts;
-            //this.posts = this.data.data;
             this.perPage = this.data.per_page;
             this.totalData = this.data.total;
             this.totalPage += 1;
             for (let i = 0; i < posts.length; i++) {
               this.posts.push(this.data[i]);
             }
-            //this.posts = this.posts.concat(posts);
           },
           error => this.errorMessage = <any>error);
 
@@ -123,7 +107,6 @@ export class HomePage {
     if (this.like_btn.icon_name === 'heart-outline') {
       this.like_btn.icon_name = 'heart';
       this.like_btn.color = 'danger';
-      // Do some API job in here for real!
     }
     else {
       this.like_btn.icon_name = 'heart-outline';
