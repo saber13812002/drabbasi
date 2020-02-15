@@ -1,0 +1,594 @@
+{
+	"info": {
+		"_postman_id": "2c547d33-9170-40dc-8249-debba90f6249",
+		"name": "saber",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCategories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <GetCategories xmlns=\"http://tempuri.org/\">\r\n      <CourseID>1</CourseID>\r\n    </GetCategories>\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "http://webservice.yaghin.org/Mainservice.asmx?op=GetCategories",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"yaghin",
+						"org"
+					],
+					"path": [
+						"Mainservice.asmx"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "GetCategories"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "2-Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Login xmlns=\"http://tempuri.org/\">\r\n      <Username>itabest</Username>\r\n      <Password>987542</Password>\r\n      <uptodate>true</uptodate>\r\n      <serviceSessionId>GPMSKX3CqANoxlaP3LYHlA/rnaJYa+rgfgvaFtFbSnsD/qrzHWaLrGftPL4RX7OObXQQpn1INQmVZsU/etnbRA==</serviceSessionId>\r\n    </Login>\r\n  </soap:Body>\r\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://webservices.raja.ir/online2Services.asmx?op=Login",
+							"protocol": "https",
+							"host": [
+								"webservices",
+								"raja",
+								"ir"
+							],
+							"path": [
+								"online2Services.asmx"
+							],
+							"query": [
+								{
+									"key": "op",
+									"value": "Login"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "2.0.50727"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Jan 2019 19:20:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1330"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n    <soap:Body>\n        <LoginResponse xmlns=\"http://tempuri.org/\">\n            <LoginResult>\n                <xs:schema id=\"NewDataSet\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\n                    <xs:element name=\"NewDataSet\" msdata:IsDataSet=\"true\" msdata:UseCurrentLocale=\"true\">\n                        <xs:complexType>\n                            <xs:choice minOccurs=\"0\" maxOccurs=\"unbounded\">\n                                <xs:element name=\"Table1\">\n                                    <xs:complexType>\n                                        <xs:sequence>\n                                            <xs:element name=\"RetStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgencyName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Percent\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Username\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IP\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Email\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"MACAdress\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"PinCode\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserDisplayName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"InstallationDate\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SellerGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"SaleCenterCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsResetNeeded\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastConnect\" type=\"xs:dateTime\" minOccurs=\"0\" />\n                                            <xs:element name=\"TicketSeries\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastSellTicket\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"GroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AccessRight\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SessionID\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsLogin\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pRegisterTicketTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pMaxReduplicated\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ShowExpressMsgTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"diffLastConnect\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Maxuserlifetime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgentCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ZoneCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"province\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"City\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"address\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber1\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Fax\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"ClientIp\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"chektoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"updatetoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"doruind\" type=\"xs:string\" minOccurs=\"0\" />\n                                        </xs:sequence>\n                                    </xs:complexType>\n                                </xs:element>\n                            </xs:choice>\n                        </xs:complexType>\n                    </xs:element>\n                </xs:schema>\n                <diffgr:diffgram xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\" xmlns:diffgr=\"urn:schemas-microsoft-com:xml-diffgram-v1\">\n                    <NewDataSet xmlns=\"\">\n                        <Table1 diffgr:id=\"Table11\" msdata:rowOrder=\"0\" diffgr:hasChanges=\"inserted\">\n                            <RetStatus>1</RetStatus>\n                            <AgencyName>homay aseman</AgencyName>\n                            <Percent>2</Percent>\n                            <UserCode>8027</UserCode>\n                            <Username>itabest</Username>\n                            <UserStatus>1</UserStatus>\n                            <IP>94.182.183.197</IP>\n                            <SaleCenterCode>8027</SaleCenterCode>\n                            <LastConnect>2017-02-27T14:23:27+03:30</LastConnect>\n                            <LastSellTicket>0</LastSellTicket>\n                            <UserGroupCode>2</UserGroupCode>\n                            <GroupCode>25</GroupCode>\n                            <AccessRight>%1%,%2%,%201%,%203%,%205%,%300139%</AccessRight>\n                            <SessionID>e4460fbd099c3ac802c757cbef54fe22</SessionID>\n                            <IsLogin>1</IsLogin>\n                            <pRegisterTicketTime>100</pRegisterTicketTime>\n                            <pMaxReduplicated>1</pMaxReduplicated>\n                            <ShowExpressMsgTime>6</ShowExpressMsgTime>\n                            <diffLastConnect>0</diffLastConnect>\n                            <Maxuserlifetime>0</Maxuserlifetime>\n                            <AgentCode>35</AgentCode>\n                            <ZoneCode>11</ZoneCode>\n                            <ClientIp>0.0.0.0</ClientIp>\n                            <chektoken>0</chektoken>\n                            <updatetoken>0</updatetoken>\n                            <doruind>0</doruind>\n                        </Table1>\n                    </NewDataSet>\n                </diffgr:diffgram>\n            </LoginResult>\n        </LoginResponse>\n    </soap:Body>\n</soap:Envelope>"
+				}
+			]
+		},
+		{
+			"name": "GetCourses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <GetCourses xmlns=\"http://tempuri.org/\" />\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "http://webservice.yaghin.org/Mainservice.asmx?op=GetCourses",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"yaghin",
+						"org"
+					],
+					"path": [
+						"Mainservice.asmx"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "GetCourses"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "2-Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Login xmlns=\"http://tempuri.org/\">\r\n      <Username>itabest</Username>\r\n      <Password>987542</Password>\r\n      <uptodate>true</uptodate>\r\n      <serviceSessionId>GPMSKX3CqANoxlaP3LYHlA/rnaJYa+rgfgvaFtFbSnsD/qrzHWaLrGftPL4RX7OObXQQpn1INQmVZsU/etnbRA==</serviceSessionId>\r\n    </Login>\r\n  </soap:Body>\r\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://webservices.raja.ir/online2Services.asmx?op=Login",
+							"protocol": "https",
+							"host": [
+								"webservices",
+								"raja",
+								"ir"
+							],
+							"path": [
+								"online2Services.asmx"
+							],
+							"query": [
+								{
+									"key": "op",
+									"value": "Login"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "2.0.50727"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Jan 2019 19:20:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1330"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n    <soap:Body>\n        <LoginResponse xmlns=\"http://tempuri.org/\">\n            <LoginResult>\n                <xs:schema id=\"NewDataSet\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\n                    <xs:element name=\"NewDataSet\" msdata:IsDataSet=\"true\" msdata:UseCurrentLocale=\"true\">\n                        <xs:complexType>\n                            <xs:choice minOccurs=\"0\" maxOccurs=\"unbounded\">\n                                <xs:element name=\"Table1\">\n                                    <xs:complexType>\n                                        <xs:sequence>\n                                            <xs:element name=\"RetStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgencyName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Percent\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Username\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IP\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Email\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"MACAdress\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"PinCode\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserDisplayName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"InstallationDate\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SellerGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"SaleCenterCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsResetNeeded\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastConnect\" type=\"xs:dateTime\" minOccurs=\"0\" />\n                                            <xs:element name=\"TicketSeries\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastSellTicket\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"GroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AccessRight\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SessionID\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsLogin\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pRegisterTicketTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pMaxReduplicated\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ShowExpressMsgTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"diffLastConnect\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Maxuserlifetime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgentCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ZoneCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"province\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"City\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"address\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber1\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Fax\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"ClientIp\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"chektoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"updatetoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"doruind\" type=\"xs:string\" minOccurs=\"0\" />\n                                        </xs:sequence>\n                                    </xs:complexType>\n                                </xs:element>\n                            </xs:choice>\n                        </xs:complexType>\n                    </xs:element>\n                </xs:schema>\n                <diffgr:diffgram xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\" xmlns:diffgr=\"urn:schemas-microsoft-com:xml-diffgram-v1\">\n                    <NewDataSet xmlns=\"\">\n                        <Table1 diffgr:id=\"Table11\" msdata:rowOrder=\"0\" diffgr:hasChanges=\"inserted\">\n                            <RetStatus>1</RetStatus>\n                            <AgencyName>homay aseman</AgencyName>\n                            <Percent>2</Percent>\n                            <UserCode>8027</UserCode>\n                            <Username>itabest</Username>\n                            <UserStatus>1</UserStatus>\n                            <IP>94.182.183.197</IP>\n                            <SaleCenterCode>8027</SaleCenterCode>\n                            <LastConnect>2017-02-27T14:23:27+03:30</LastConnect>\n                            <LastSellTicket>0</LastSellTicket>\n                            <UserGroupCode>2</UserGroupCode>\n                            <GroupCode>25</GroupCode>\n                            <AccessRight>%1%,%2%,%201%,%203%,%205%,%300139%</AccessRight>\n                            <SessionID>e4460fbd099c3ac802c757cbef54fe22</SessionID>\n                            <IsLogin>1</IsLogin>\n                            <pRegisterTicketTime>100</pRegisterTicketTime>\n                            <pMaxReduplicated>1</pMaxReduplicated>\n                            <ShowExpressMsgTime>6</ShowExpressMsgTime>\n                            <diffLastConnect>0</diffLastConnect>\n                            <Maxuserlifetime>0</Maxuserlifetime>\n                            <AgentCode>35</AgentCode>\n                            <ZoneCode>11</ZoneCode>\n                            <ClientIp>0.0.0.0</ClientIp>\n                            <chektoken>0</chektoken>\n                            <updatetoken>0</updatetoken>\n                            <doruind>0</doruind>\n                        </Table1>\n                    </NewDataSet>\n                </diffgr:diffgram>\n            </LoginResult>\n        </LoginResponse>\n    </soap:Body>\n</soap:Envelope>"
+				}
+			]
+		},
+		{
+			"name": "GetDocumentCategories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <GetDocumentCategories xmlns=\"http://tempuri.org/\" />\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "http://webservice.yaghin.org/Mainservice.asmx?op=GetDocumentCategories",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"yaghin",
+						"org"
+					],
+					"path": [
+						"Mainservice.asmx"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "GetDocumentCategories"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "2-Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Login xmlns=\"http://tempuri.org/\">\r\n      <Username>itabest</Username>\r\n      <Password>987542</Password>\r\n      <uptodate>true</uptodate>\r\n      <serviceSessionId>GPMSKX3CqANoxlaP3LYHlA/rnaJYa+rgfgvaFtFbSnsD/qrzHWaLrGftPL4RX7OObXQQpn1INQmVZsU/etnbRA==</serviceSessionId>\r\n    </Login>\r\n  </soap:Body>\r\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://webservices.raja.ir/online2Services.asmx?op=Login",
+							"protocol": "https",
+							"host": [
+								"webservices",
+								"raja",
+								"ir"
+							],
+							"path": [
+								"online2Services.asmx"
+							],
+							"query": [
+								{
+									"key": "op",
+									"value": "Login"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "2.0.50727"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Jan 2019 19:20:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1330"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n    <soap:Body>\n        <LoginResponse xmlns=\"http://tempuri.org/\">\n            <LoginResult>\n                <xs:schema id=\"NewDataSet\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\n                    <xs:element name=\"NewDataSet\" msdata:IsDataSet=\"true\" msdata:UseCurrentLocale=\"true\">\n                        <xs:complexType>\n                            <xs:choice minOccurs=\"0\" maxOccurs=\"unbounded\">\n                                <xs:element name=\"Table1\">\n                                    <xs:complexType>\n                                        <xs:sequence>\n                                            <xs:element name=\"RetStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgencyName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Percent\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Username\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IP\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Email\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"MACAdress\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"PinCode\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserDisplayName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"InstallationDate\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SellerGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"SaleCenterCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsResetNeeded\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastConnect\" type=\"xs:dateTime\" minOccurs=\"0\" />\n                                            <xs:element name=\"TicketSeries\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastSellTicket\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"GroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AccessRight\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SessionID\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsLogin\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pRegisterTicketTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pMaxReduplicated\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ShowExpressMsgTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"diffLastConnect\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Maxuserlifetime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgentCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ZoneCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"province\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"City\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"address\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber1\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Fax\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"ClientIp\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"chektoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"updatetoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"doruind\" type=\"xs:string\" minOccurs=\"0\" />\n                                        </xs:sequence>\n                                    </xs:complexType>\n                                </xs:element>\n                            </xs:choice>\n                        </xs:complexType>\n                    </xs:element>\n                </xs:schema>\n                <diffgr:diffgram xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\" xmlns:diffgr=\"urn:schemas-microsoft-com:xml-diffgram-v1\">\n                    <NewDataSet xmlns=\"\">\n                        <Table1 diffgr:id=\"Table11\" msdata:rowOrder=\"0\" diffgr:hasChanges=\"inserted\">\n                            <RetStatus>1</RetStatus>\n                            <AgencyName>homay aseman</AgencyName>\n                            <Percent>2</Percent>\n                            <UserCode>8027</UserCode>\n                            <Username>itabest</Username>\n                            <UserStatus>1</UserStatus>\n                            <IP>94.182.183.197</IP>\n                            <SaleCenterCode>8027</SaleCenterCode>\n                            <LastConnect>2017-02-27T14:23:27+03:30</LastConnect>\n                            <LastSellTicket>0</LastSellTicket>\n                            <UserGroupCode>2</UserGroupCode>\n                            <GroupCode>25</GroupCode>\n                            <AccessRight>%1%,%2%,%201%,%203%,%205%,%300139%</AccessRight>\n                            <SessionID>e4460fbd099c3ac802c757cbef54fe22</SessionID>\n                            <IsLogin>1</IsLogin>\n                            <pRegisterTicketTime>100</pRegisterTicketTime>\n                            <pMaxReduplicated>1</pMaxReduplicated>\n                            <ShowExpressMsgTime>6</ShowExpressMsgTime>\n                            <diffLastConnect>0</diffLastConnect>\n                            <Maxuserlifetime>0</Maxuserlifetime>\n                            <AgentCode>35</AgentCode>\n                            <ZoneCode>11</ZoneCode>\n                            <ClientIp>0.0.0.0</ClientIp>\n                            <chektoken>0</chektoken>\n                            <updatetoken>0</updatetoken>\n                            <doruind>0</doruind>\n                        </Table1>\n                    </NewDataSet>\n                </diffgr:diffgram>\n            </LoginResult>\n        </LoginResponse>\n    </soap:Body>\n</soap:Envelope>"
+				}
+			]
+		},
+		{
+			"name": "GetDocuments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <GetDocuments xmlns=\"http://tempuri.org/\">\r\n      <Word>string</Word>\r\n      <DocumentCategoryIDs>\r\n        <int>1</int>\r\n        <int>3</int>\r\n      </DocumentCategoryIDs>\r\n    </GetDocuments>\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "http://webservice.yaghin.org/Mainservice.asmx?op=GetDocuments",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"yaghin",
+						"org"
+					],
+					"path": [
+						"Mainservice.asmx"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "GetDocuments"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "2-Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Login xmlns=\"http://tempuri.org/\">\r\n      <Username>itabest</Username>\r\n      <Password>987542</Password>\r\n      <uptodate>true</uptodate>\r\n      <serviceSessionId>GPMSKX3CqANoxlaP3LYHlA/rnaJYa+rgfgvaFtFbSnsD/qrzHWaLrGftPL4RX7OObXQQpn1INQmVZsU/etnbRA==</serviceSessionId>\r\n    </Login>\r\n  </soap:Body>\r\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://webservices.raja.ir/online2Services.asmx?op=Login",
+							"protocol": "https",
+							"host": [
+								"webservices",
+								"raja",
+								"ir"
+							],
+							"path": [
+								"online2Services.asmx"
+							],
+							"query": [
+								{
+									"key": "op",
+									"value": "Login"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "2.0.50727"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Jan 2019 19:20:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1330"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n    <soap:Body>\n        <LoginResponse xmlns=\"http://tempuri.org/\">\n            <LoginResult>\n                <xs:schema id=\"NewDataSet\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\n                    <xs:element name=\"NewDataSet\" msdata:IsDataSet=\"true\" msdata:UseCurrentLocale=\"true\">\n                        <xs:complexType>\n                            <xs:choice minOccurs=\"0\" maxOccurs=\"unbounded\">\n                                <xs:element name=\"Table1\">\n                                    <xs:complexType>\n                                        <xs:sequence>\n                                            <xs:element name=\"RetStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgencyName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Percent\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Username\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IP\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Email\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"MACAdress\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"PinCode\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserDisplayName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"InstallationDate\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SellerGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"SaleCenterCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsResetNeeded\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastConnect\" type=\"xs:dateTime\" minOccurs=\"0\" />\n                                            <xs:element name=\"TicketSeries\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastSellTicket\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"GroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AccessRight\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SessionID\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsLogin\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pRegisterTicketTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pMaxReduplicated\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ShowExpressMsgTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"diffLastConnect\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Maxuserlifetime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgentCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ZoneCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"province\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"City\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"address\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber1\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Fax\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"ClientIp\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"chektoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"updatetoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"doruind\" type=\"xs:string\" minOccurs=\"0\" />\n                                        </xs:sequence>\n                                    </xs:complexType>\n                                </xs:element>\n                            </xs:choice>\n                        </xs:complexType>\n                    </xs:element>\n                </xs:schema>\n                <diffgr:diffgram xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\" xmlns:diffgr=\"urn:schemas-microsoft-com:xml-diffgram-v1\">\n                    <NewDataSet xmlns=\"\">\n                        <Table1 diffgr:id=\"Table11\" msdata:rowOrder=\"0\" diffgr:hasChanges=\"inserted\">\n                            <RetStatus>1</RetStatus>\n                            <AgencyName>homay aseman</AgencyName>\n                            <Percent>2</Percent>\n                            <UserCode>8027</UserCode>\n                            <Username>itabest</Username>\n                            <UserStatus>1</UserStatus>\n                            <IP>94.182.183.197</IP>\n                            <SaleCenterCode>8027</SaleCenterCode>\n                            <LastConnect>2017-02-27T14:23:27+03:30</LastConnect>\n                            <LastSellTicket>0</LastSellTicket>\n                            <UserGroupCode>2</UserGroupCode>\n                            <GroupCode>25</GroupCode>\n                            <AccessRight>%1%,%2%,%201%,%203%,%205%,%300139%</AccessRight>\n                            <SessionID>e4460fbd099c3ac802c757cbef54fe22</SessionID>\n                            <IsLogin>1</IsLogin>\n                            <pRegisterTicketTime>100</pRegisterTicketTime>\n                            <pMaxReduplicated>1</pMaxReduplicated>\n                            <ShowExpressMsgTime>6</ShowExpressMsgTime>\n                            <diffLastConnect>0</diffLastConnect>\n                            <Maxuserlifetime>0</Maxuserlifetime>\n                            <AgentCode>35</AgentCode>\n                            <ZoneCode>11</ZoneCode>\n                            <ClientIp>0.0.0.0</ClientIp>\n                            <chektoken>0</chektoken>\n                            <updatetoken>0</updatetoken>\n                            <doruind>0</doruind>\n                        </Table1>\n                    </NewDataSet>\n                </diffgr:diffgram>\n            </LoginResult>\n        </LoginResponse>\n    </soap:Body>\n</soap:Envelope>"
+				}
+			]
+		},
+		{
+			"name": "GetDocuments Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <GetSessions xmlns=\"http://tempuri.org/\">\r\n      <Count>0</Count>\r\n      <page>0</page>\r\n      <CourseID>0</CourseID>\r\n      <CategoryID>0</CategoryID>\r\n      <ItemOrder>true</ItemOrder>\r\n      <Tadvin>true</Tadvin>\r\n      <SearchPhrase></SearchPhrase>\r\n    </GetSessions>\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "http://webservice.yaghin.org/Mainservice.asmx?op=GetSessions",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"yaghin",
+						"org"
+					],
+					"path": [
+						"Mainservice.asmx"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "GetSessions"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "2-Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <Login xmlns=\"http://tempuri.org/\">\r\n      <Username>itabest</Username>\r\n      <Password>987542</Password>\r\n      <uptodate>true</uptodate>\r\n      <serviceSessionId>GPMSKX3CqANoxlaP3LYHlA/rnaJYa+rgfgvaFtFbSnsD/qrzHWaLrGftPL4RX7OObXQQpn1INQmVZsU/etnbRA==</serviceSessionId>\r\n    </Login>\r\n  </soap:Body>\r\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "https://webservices.raja.ir/online2Services.asmx?op=Login",
+							"protocol": "https",
+							"host": [
+								"webservices",
+								"raja",
+								"ir"
+							],
+							"path": [
+								"online2Services.asmx"
+							],
+							"query": [
+								{
+									"key": "op",
+									"value": "Login"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "2.0.50727"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Jan 2019 19:20:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1330"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n    <soap:Body>\n        <LoginResponse xmlns=\"http://tempuri.org/\">\n            <LoginResult>\n                <xs:schema id=\"NewDataSet\" xmlns=\"\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\">\n                    <xs:element name=\"NewDataSet\" msdata:IsDataSet=\"true\" msdata:UseCurrentLocale=\"true\">\n                        <xs:complexType>\n                            <xs:choice minOccurs=\"0\" maxOccurs=\"unbounded\">\n                                <xs:element name=\"Table1\">\n                                    <xs:complexType>\n                                        <xs:sequence>\n                                            <xs:element name=\"RetStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgencyName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Percent\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Username\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserStatus\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IP\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Email\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"MACAdress\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"PinCode\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserDisplayName\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"InstallationDate\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SellerGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"SaleCenterCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsResetNeeded\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastConnect\" type=\"xs:dateTime\" minOccurs=\"0\" />\n                                            <xs:element name=\"TicketSeries\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"LastSellTicket\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"UserGroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"GroupCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AccessRight\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"SessionID\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"IsLogin\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pRegisterTicketTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"pMaxReduplicated\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ShowExpressMsgTime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"diffLastConnect\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"Maxuserlifetime\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"AgentCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"ZoneCode\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"province\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"City\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"address\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"TelNumber1\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"Fax\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"ClientIp\" type=\"xs:string\" minOccurs=\"0\" />\n                                            <xs:element name=\"chektoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"updatetoken\" type=\"xs:int\" minOccurs=\"0\" />\n                                            <xs:element name=\"doruind\" type=\"xs:string\" minOccurs=\"0\" />\n                                        </xs:sequence>\n                                    </xs:complexType>\n                                </xs:element>\n                            </xs:choice>\n                        </xs:complexType>\n                    </xs:element>\n                </xs:schema>\n                <diffgr:diffgram xmlns:msdata=\"urn:schemas-microsoft-com:xml-msdata\" xmlns:diffgr=\"urn:schemas-microsoft-com:xml-diffgram-v1\">\n                    <NewDataSet xmlns=\"\">\n                        <Table1 diffgr:id=\"Table11\" msdata:rowOrder=\"0\" diffgr:hasChanges=\"inserted\">\n                            <RetStatus>1</RetStatus>\n                            <AgencyName>homay aseman</AgencyName>\n                            <Percent>2</Percent>\n                            <UserCode>8027</UserCode>\n                            <Username>itabest</Username>\n                            <UserStatus>1</UserStatus>\n                            <IP>94.182.183.197</IP>\n                            <SaleCenterCode>8027</SaleCenterCode>\n                            <LastConnect>2017-02-27T14:23:27+03:30</LastConnect>\n                            <LastSellTicket>0</LastSellTicket>\n                            <UserGroupCode>2</UserGroupCode>\n                            <GroupCode>25</GroupCode>\n                            <AccessRight>%1%,%2%,%201%,%203%,%205%,%300139%</AccessRight>\n                            <SessionID>e4460fbd099c3ac802c757cbef54fe22</SessionID>\n                            <IsLogin>1</IsLogin>\n                            <pRegisterTicketTime>100</pRegisterTicketTime>\n                            <pMaxReduplicated>1</pMaxReduplicated>\n                            <ShowExpressMsgTime>6</ShowExpressMsgTime>\n                            <diffLastConnect>0</diffLastConnect>\n                            <Maxuserlifetime>0</Maxuserlifetime>\n                            <AgentCode>35</AgentCode>\n                            <ZoneCode>11</ZoneCode>\n                            <ClientIp>0.0.0.0</ClientIp>\n                            <chektoken>0</chektoken>\n                            <updatetoken>0</updatetoken>\n                            <doruind>0</doruind>\n                        </Table1>\n                    </NewDataSet>\n                </diffgr:diffgram>\n            </LoginResult>\n        </LoginResponse>\n    </soap:Body>\n</soap:Envelope>"
+				}
+			]
+		}
+	]
+}
