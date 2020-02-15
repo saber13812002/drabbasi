@@ -36,7 +36,7 @@ export class NbaPage {
     
   constructor(public navCtrl: NavController, public navParams: NavParams, public playerDataProvider:RestProvider, public loadingCtrl:LoadingController) {
       
-      let loader= loadingCtrl.create({content:"Loading NBA Score Box"});
+      let loader= loadingCtrl.create({content:"..."});
       loader.present();
       
         playerDataProvider.getMatch(0).subscribe(match=>{

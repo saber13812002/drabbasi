@@ -4,8 +4,8 @@ import { PlaygroundDetailPage } from '../playground-detail/playground-detail';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoadingController } from 'ionic-angular';
 import { Geolocation, GeolocationOptions, Geoposition, PositionError } from '@ionic-native/geolocation';
-import { SessionBody } from '../../models/session';
 import { ENV } from '../../env';
+import { SessionBody } from '../../models/session';
 
 @IonicPage({
   name: 'home'
@@ -16,6 +16,8 @@ import { ENV } from '../../env';
   providers: [RestProvider]
 })
 export class HomePage {
+
+  public sessionBody: SessionBody;
 
   public stories = new Array();
   public posts = new Array();
@@ -44,38 +46,36 @@ export class HomePage {
     private geolocation: Geolocation
   ) {
 
-    this.detailPage = PlaygroundDetailPage;
-
-    let loader = loadingCtrl.create({ content: "..." });
-    loader.present();
-
-    restProvider.getStories(0).subscribe(stories => {
-      console.log('stories : ', stories);
-      this.data = stories;
-      this.stories = this.data.data;
-      this.perPage = this.data.per_page;
-      this.totalData = this.data.total;
-      this.stories = stories;
-    });
-
-    restProvider.getPosts(0).subscribe(posts => {
-      console.log('stories : ', posts);
-      posts.forEach(element => {
-        element.file = element.file + ".jpg";
-        return element
-      });
-
-      this.data = posts;
-      this.posts = this.data.data;
-      this.perPage = this.data.per_page;
-      this.totalData = this.data.total;
-      this.totalPage += 1;
-
-      this.posts = posts;
-    });
-
-    loader.dismiss();
   }
+
+  async ionViewDidLoad() {
+    await this.loadStaffAttendanceReport();
+  }
+
+
+  public async loadStaffAttendanceReport() {
+
+    let loader = this.loadingCtrl.create({ content: 'Loading Report...' });
+    await loader.present();
+
+
+    var report = await this.restProvider.getPosts(
+      0
+    );
+    // var report = await this.restProvider.getSession(
+    //   0
+    // );
+
+    report.subscribe(
+      sessionBody => this.sessionBody = sessionBody,
+      err => {
+        console.log(err);
+        loader.dismiss();
+      },
+      () => loader.dismiss()
+    );
+  }
+
 
   loadPlaygroundDetail(playground) {
     console.log(playground);

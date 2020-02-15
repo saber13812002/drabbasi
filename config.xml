@@ -2,7 +2,7 @@
 <widget id="ir.kolbeh-keramat.ionic" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>kolbeh-keramat</name>
     <description>kolbeh-keramat.ir</description>
-    <author email="saber.tabatabaee@gmail.com" href="http://kolbeh-keramat.ir">kolbeh-keramat Team</author>
+    <author email="saber.tabatabaee@gmail.com" href="https://kolbeh-keramat.ir">kolbeh-keramat Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

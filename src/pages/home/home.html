@@ -19,6 +19,7 @@
 
   <hr no-margin no-padding>
   <ion-list (swipe)="swipePage($event)" *ngFor="let post of posts" class="appfont">
+    <!-- <ion-list (swipe)="swipePage($event)" *ngFor="let post of sessionBody" class="appfont"> -->
 
     <!-- Cards -->
     <ion-card no-padding padding-bottom no-margin class="card">
@@ -43,8 +44,9 @@
 
       <div class="session-video">
         <video controls="" poster="session_default_tumb.png" id="bgvid">
-            <source src="https://hw15.cdn.asset.aparat.com/aparat-video/cca686c0e62c9f0f8441be938559b1af12670879-720p__22160.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="https://hw15.cdn.asset.aparat.com/aparat-video/cca686c0e62c9f0f8441be938559b1af12670879-720p__22160.mp4"
+            type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 

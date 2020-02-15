@@ -1,13 +1,6 @@
 @charset "UTF-8";
 #site-title {
-    font-family: 'IranSans';
-}
-
-@font-face {
-    font-family: "IranSans";
-    font-style: normal;
-    font-weight: bold;
-    src: url("http://www.kolbeh-keramat.ir/fonts/woff/IRANSansWeb(FaNum)_Bold.woff");
+    font-family: 'IranYekan';
 }
 
 @font-face {
@@ -32,7 +25,7 @@
 }
 
 .appfont {
-    font-family: 'IranSans';
+    font-family: 'IranYekan';
 }
 
 .red-el{

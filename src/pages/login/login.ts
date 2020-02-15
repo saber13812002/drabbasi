@@ -50,8 +50,8 @@ export class LoginPage {
       duration: 500
     });
 
-    await this.getToken();
-
+    //await this.getToken();
+this.token="s";
 
 
     loading.onDidDismiss(() => {
@@ -68,15 +68,15 @@ export class LoginPage {
 
   }
 
-  async getToken() {
-    let token = await this.restProvider.postLogin(this.username, this.password).subscribe(data => {
-      console.log(data);
-      return data.token;
-      //localStorage.setItem('wpIonicToken', JSON.stringify(data));
-    });
+  // async getToken() {
+  //   let token = await this.restProvider.postLogin(this.username, this.password).subscribe(data => {
+  //     console.log(data);
+  //     return data.token;
+  //     //localStorage.setItem('wpIonicToken', JSON.stringify(data));
+  //   });
 
-    this.token = token;
-  }
+  //   this.token = token;
+  // }
 
   setLanguage() {
     let defaultLanguage = this.translate.getDefaultLang();
